@@ -1,0 +1,31 @@
+.panel-group {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+}
+
+.panel-default {
+	width: 70%;
+
+	text-align: center;
+}
+
+.sailor__profession-panel {
+	text-align: left;
+}
+
+.professional-panel__document {
+	margin: 10px 0;
+}
+
+.professional-panel__document-title {
+	font-weight: bold;
+}
+
+.professional-panel__buttons {
+	margin-top: 30px;
+
+	display: flex;
+	justify-content: space-around;
+}
