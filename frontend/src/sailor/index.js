@@ -2,6 +2,7 @@
 import $ from 'jquery'
 import React, { Component } from 'react'
 import { Col, Panel, Accordion, Button } from 'react-bootstrap'
+import { browserHistory } from 'react-router'
 
 import './style.scss'
 
@@ -10,19 +11,32 @@ var professions = [{"title":"Вахтерный матрос","certificate_of_ed
 
 export default class Sailor extends Component {
 
+	onButtonHaveClick = () => {
+		browserHistory.push('/with-documents');
+	}
+
+	onButtonNoClick = () => {
+		browserHistory.push('/no-documents');
+	}
 
     render = () => {
 
     	let profs = professions.map((item, number) => {
     		return (
     			<Panel key={ number } header={ item.title } eventKey={number} className="sailor__profession-panel">
-    				<div className="professional-panel__document"><span className="professional-panel__document-title">Свидетельство об образовании:</span> { item.certificate_of_education }</div>
+    				{/*<div className="professional-panel__document"><span className="professional-panel__document-title">Свидетельство об образовании:</span> { item.certificate_of_education }</div>
     				<div className="professional-panel__document"><span className="professional-panel__document-title">Свидетельство об опыте:</span> { item.certificate_of_experience }</div>
     				<div className="professional-panel__document"><span className="professional-panel__document-title">Курсы по технике безопасности:</span> { item.сertificate_of_security_preparations }</div>
-    				<div className="professional-panel__document"><span className="professional-panel__document-title">Курсы по охране:</span> { item.certificate_of_protection }</div>
+    				<div className="professional-panel__document"><span className="professional-panel__document-title">Курсы по охране:</span> { item.certificate_of_protection }</div>*/}
+    				<ul className="professional-panel__documents">
+    					<li>{ item.certificate_of_education }</li>
+    					<li>{ item.certificate_of_experience }</li>
+    					<li>{ item.сertificate_of_security_preparations }</li>
+    					<li>{ item.certificate_of_protection }</li>
+    				</ul>
     				<div className="professional-panel__buttons">
-	    				<Button bsStyle="success">У меня есть эти документы</Button>
-	    				<Button bsStyle="danger">У меня нет этих документов</Button>
+	    				<Button bsStyle="success" onClick={ this.onButtonHaveClick }>У меня есть эти документы</Button>
+	    				<Button bsStyle="danger" onClick={ this.onButtonNoClick }>У меня нет этих документов</Button>
     				</div>
     			</Panel>
     		)

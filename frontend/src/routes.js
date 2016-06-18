@@ -6,6 +6,9 @@ import Home from './home'
 
 import Sailor from './sailor/'
 
+import HaveDocuments from './haveDocuments/'
+import NoDocuments from './noDocuments/'
+
 import WrongProfession from './wrongProfession/'
 import NotFound from './notFound'
 
@@ -15,6 +18,8 @@ export const routes = (
             <IndexRoute component={ Home }/>
             <Route path="/wrong" component={ WrongProfession }/>
             <Route path="/sailor" component={ Sailor }/>
+            <Route path="/no-documents" component={ NoDocuments }/>
+            <Route path="/with-documents" component={ HaveDocuments }/>
             <Route path="*" component={ NotFound }/>
         </Route>
     </div>

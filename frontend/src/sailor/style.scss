@@ -15,8 +15,10 @@
 	text-align: left;
 }
 
-.professional-panel__document {
+.professional-panel__documents li {
 	margin: 10px 0;
+
+	font-size: 16px;
 }
 
 .professional-panel__document-title {
@@ -28,4 +30,8 @@
 
 	display: flex;
 	justify-content: space-around;
+}
+
+.btn {
+	font-size: 16px;
 }
