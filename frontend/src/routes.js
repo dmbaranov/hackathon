@@ -1,34 +1,34 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 
-import App from './containers/App'
-import Home from './components/main.Home'
-import LoginForm from './components/login.LoginForm'
-import NotFound from './components/common.NotFound'
-import requireAuthentication from './containers/AuthComponent'
+import App from './App'
+import Home from './home'
 
-import UserControl from './containers/UserControl'
-import AddUser from './components/users.AddUser'
-import UserList from './components/users.UserList'
+import LoginForm from './login'
 
-import DepartmentsControl from './containers/DepartmentsControl'
-import DepartmentsList from './components/deps.DepartmentsList'
-import AddDepartment from './components/deps.AddDepartment'
+import AddUser from './addUser'
+import UserList from './userList'
+
+import DepartmentsList from './departmentsList'
+import AddDepartment from './addDepartment'
+
+import NotFound from './notFound'
+import requireAuthentication from './authComponent'
 
 export const routes = (
     <div>
         <Route path="/" component={ App }>
             <IndexRoute component={ Home }/>
-            <Route path="/login" component={ LoginForm }/>
-            <Route path="/users" component={ requireAuthentication(UserControl) }>
-                <Route path="/users/list" component={ requireAuthentication(UserList) }/>
+            <Route path="/users">
                 <Route path="/users/add" component={ requireAuthentication(AddUser) }/>
+                <Route path="/users/list" component={ requireAuthentication(UserList) }/>
             </Route>
-            <Route path="/departments" component={ requireAuthentication(DepartmentsControl) }>
-                <Route path="/departments/getlist" component={ requireAuthentication(DepartmentsList) }/>
+            <Route path="/departments">
+                <Route path="/departments/list" component={ requireAuthentication(DepartmentsList) }/>
                 <Route path="/departments/add" component={ requireAuthentication(AddDepartment) }/>
             </Route>
+            <Route path="/login" component={ LoginForm }/>
+            <Route path="*" component={ NotFound }/>
         </Route>
-        <Route path="*" component={ NotFound }/>
     </div>
 );
