@@ -28,6 +28,10 @@ export default class Home extends Component {
     render = () => {
         return (
             <Col componentClass="div" xs={ 12 } className="home" >
+                <div className="home__header">
+                    <div className="home__logo"></div>
+                </div>
+                {/*<div className="home__title">Создай себя</div>*/}
                 <div className="profession-button color-1" onClick={ this.onProfessionClick.bind(this, "pilot") }>
                     <span>Пилот</span>
                 </div>
@@ -40,6 +44,7 @@ export default class Home extends Component {
                 <div className="profession-button color-4" onClick={ this.onProfessionClick.bind(this, "driver") }>
 					<span>Гонщик</span>
                 </div>
+                {/*<div className="home__logo"/>*/}
             </Col>
         )
     };

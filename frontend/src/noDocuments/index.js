@@ -72,7 +72,8 @@ export default class NoDocuments extends Component {
 				  					position: coords,
 				  					map: map,
 				  					title: 'Title',
-				  					icon: 'https://www.gstatic.com/images/branding/product/1x/maps_64dp.png'
+				  					icon: 'http://cs631522.vk.me/v631522565/2e959/5HEQDRskr00.jpg'
+				  					//icon: 'https://www.gstatic.com/images/branding/product/1x/maps_64dp.png'
 				  				});
 
 			  				}
@@ -81,7 +82,8 @@ export default class NoDocuments extends Component {
 				  				var marker = new google.maps.Marker({
 				  					position: coords,
 				  					map: map,
-				  					title: 'Title'
+				  					title: 'Title',
+				  					icon: 'http://cs631522.vk.me/v631522565/2e960/PTajvJ2yqvY.jpg'
 				  				});
 			  				}
 

@@ -17,3 +17,29 @@
 	font-size: 15px;
 	font-family: "Lato";
 }
+
+.have-documents__chart {
+	width: 1200px;
+	height: 865px;
+	//background: url('./povar.jpg') no-repeat;
+}
+
+.sailor-img {
+	background: url('./sailor.jpg') no-repeat;
+}
+
+.cook-img {
+	background: url('./povar.jpg') no-repeat;
+}
+
+.motorist-img {
+	background: url('./motorist.jpg') no-repeat;
+}
+
+.electrician-img {
+	background: url('./electrician.jpg') no-repeat;
+}
+
+.none-img {
+	background: red;
+}

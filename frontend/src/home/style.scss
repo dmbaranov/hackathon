@@ -1,4 +1,6 @@
 .home {
+  margin-top: 30px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,4 +40,22 @@
 
 .color-4 {
 	background: #28ABE3;
+}
+
+.home__header {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.home__logo {
+	width: 533px;
+	height: 200px;
+	background: url('./logo2.jpg') no-repeat;
+}
+
+.home__title {
+	font-family: "Lato";
+	font-size: 24px;
+	text-transform: uppercase;
 }

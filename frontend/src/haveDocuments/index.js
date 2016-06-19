@@ -14,7 +14,7 @@ export default class HaveDocuments extends Component {
 
 	componentDidMount = () => {
 
-		let jsonData;
+		/*let jsonData;
 
 		switch (this.props.sailor.specialization) {
 
@@ -58,24 +58,47 @@ export default class HaveDocuments extends Component {
 		}
 
 		new Chartist.Bar('#chartSalary', dataSalary);
-		new Chartist.Bar('#chartVacancies', dataVacancies);
+		new Chartist.Bar('#chartVacancies', dataVacancies);*/
 
 	}
 
     render = () => {
 
-    	console.log(this.props);
+    	let classImg = 'have-documents__chart';
+
+    	switch (this.props.sailor.specialization) {
+
+    		case 'Вахтенный матрос':
+    			classImg += ' sailor-img';
+    			break;
+
+    		case 'Судовой повар':
+    			classImg +=' cook-img';
+    			break;
+
+    		case 'Вахтенный моторист':
+    			classImg += ' motorist-img';
+    			break;
+
+    		case 'Судовой электрик':
+    			classImg += ' electrician-img'
+    			break;
+
+    		default:
+    			classImg += ' none-img';
+    	}
 
         return (
             <Col componentClass="div" xs={ 12 } className="have-documents">
-				<Col componentClass="div" xs={ 12 } className="have-documents__chart">
+				{/*<Col componentClass="div" xs={ 12 } className="have-documents__chart">
 					<div className="chart__title">Средние зарплаты</div>
 					<div id="chartSalary" className="chart__chart"></div>
 				</Col>
 				<Col componentClass="div" xs={ 12 } className="have-documents__chart">
 					<div className="chart__title">Количество вакансий</div>
 					<div id="chartVacancies"></div>
-				</Col>
+				</Col>*/}
+				<div className={ classImg }/>
             </Col>
         )
     };
