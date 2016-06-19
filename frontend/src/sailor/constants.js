@@ -1,0 +1,1 @@
+export const BUTTON_CLICK = 'SAILOR_BUTTON_CLICK';
