@@ -2,7 +2,7 @@ import * as con from './constants.js'
 
 const initialState = {
 	higherEducation: false,
-	courses: false
+	coursesEducation: false
 };
 
 export default function noDocuments(state = initialState, action) {
@@ -12,7 +12,7 @@ export default function noDocuments(state = initialState, action) {
 			return { ...state, higherEducation: !state.higherEducation };
 
 		case con.COURSES_DATA:
-			return { ...state, courses: !state.courses };
+			return { ...state, coursesEducation: !state.courses };
 
 		default: 
 			return state;

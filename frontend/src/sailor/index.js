@@ -1,12 +1,10 @@
 /* eslint-disable */
-import $ from 'jquery'
 import React, { Component } from 'react'
 import { Col, Panel, Accordion, Button } from 'react-bootstrap'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { browserHistory } from 'react-router'
 
-import * as con from './constants.js'
 import * as actions from './actions.js'
 
 import './style.scss'

@@ -4,10 +4,8 @@ import { Col } from 'react-bootstrap'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { browserHistory } from 'react-router'
-import $ from 'jquery'
 
 import * as actions from './actions.js'
-import * as con from './constants.js'
 
 import './style.scss'
 
