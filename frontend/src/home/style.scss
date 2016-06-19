@@ -16,9 +16,26 @@
 	text-transform: uppercase;
 	text-align: center;
 	line-height: 150px;
+	font-family: 'Lato';
+	font-size: 21px;
 
-	border: 1px solid black;
-	background: red;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 
 	cursor: pointer;
+}
+
+.color-1 {
+	background: #DB3340;
+}
+
+.color-2 {
+	background: #E8B81A;
+}
+
+.color-3 {
+	background: #20DA9B;
+}
+
+.color-4 {
+	background: #28ABE3;
 }

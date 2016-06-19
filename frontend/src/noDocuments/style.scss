@@ -1,9 +1,20 @@
 .no-documents {
-	display: flx;
+	display: flex;
+	align-items: center;
 	height: 100vh;
-	flex-direction: column;
 }
 
 .no-documents__map {
 	height: 100%;
+}
+
+.no-documents__menu {
+	position: fixed;
+	top: 50%;
+	right: 0;
+
+	font-family: 'Lato';
+	font-size: 16px;
+
+	transform: translate(0%, -50%);
 }

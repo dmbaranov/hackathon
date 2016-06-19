@@ -5,20 +5,32 @@
 	width: 100%;
 }
 
-.panel-default {
-	width: 70%;
+.panel-heading {
+	background-color: transparent !important;
+}
 
-	text-align: center;
+.panel-title {
+	text-transform: uppercase;
 }
 
 .sailor__profession-panel {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 25px 0;
+	width: 70%;
+
 	text-align: left;
+
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .professional-panel__documents li {
 	margin: 10px 0;
 
 	font-size: 16px;
+	font-family: 'Lato';
 }
 
 .professional-panel__document-title {

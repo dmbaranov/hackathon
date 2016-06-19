@@ -29,8 +29,10 @@ export default class Sailor extends Component {
     render = () => {
 
     	let profs = professions.map((item, number) => {
+    		let classes = "sailor__profession-panel color-" + (number + 1);
+
     		return (
-    			<Panel key={ number } header={ item.title } eventKey={number} className="sailor__profession-panel">
+    			<Panel key={ number } header={ item.title } eventKey={number} className={ classes }>
     				{/*<div className="professional-panel__document"><span className="professional-panel__document-title">Свидетельство об образовании:</span> { item.certificate_of_education }</div>
     				<div className="professional-panel__document"><span className="professional-panel__document-title">Свидетельство об опыте:</span> { item.certificate_of_experience }</div>
     				<div className="professional-panel__document"><span className="professional-panel__document-title">Курсы по технике безопасности:</span> { item.сertificate_of_security_preparations }</div>

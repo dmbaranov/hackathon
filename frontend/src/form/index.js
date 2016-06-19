@@ -7,6 +7,8 @@ import './style.scss'
 export default class FormComponent extends Component {
 
     render = () => {
+
+        console.log(this.props);
         
         let formData = this.props.data[0].map((item, number) => {
             if(item.type === 'select' && item.options.length !== 0) {
