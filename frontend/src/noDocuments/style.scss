@@ -10,11 +10,28 @@
 
 .no-documents__menu {
 	position: fixed;
-	top: 50%;
+	top: 20%;
 	right: 0;
 
 	font-family: 'Lato';
 	font-size: 16px;
 
 	transform: translate(0%, -50%);
+}
+
+.no-documents__menu__buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.no-documents__menu__buttons .btn {
+	margin-top: 25px;
+
+	width: 200px;
+}
+
+.no-documents__course-list {
+	position: absolute;
+	top: 150px;
 }

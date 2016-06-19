@@ -12,7 +12,7 @@ export default function noDocuments(state = initialState, action) {
 			return { ...state, higherEducation: !state.higherEducation };
 
 		case con.COURSES_DATA:
-			return { ...state, coursesEducation: !state.courses };
+			return { ...state, coursesEducation: !state.coursesEducation };
 
 		default: 
 			return state;

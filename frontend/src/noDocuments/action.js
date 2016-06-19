@@ -15,3 +15,15 @@ export function resetCourses() {
 		});
 	}
 }
+
+export function onMarkerClick(title, address) {
+	return dispatch => {
+		dispatch({
+			type: con.ON_MARKER_CLICK,
+			payload: {
+				title: title,
+				address: address
+			}
+		});
+	}
+}
