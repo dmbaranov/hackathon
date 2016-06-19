@@ -16,7 +16,7 @@ export function resetCourses() {
 	}
 }
 
-export function onMarkerClick(title, address) {
+/*export function onMarkerClick(title, address) {
 	return dispatch => {
 		dispatch({
 			type: con.ON_MARKER_CLICK,
@@ -26,4 +26,4 @@ export function onMarkerClick(title, address) {
 			}
 		});
 	}
-}
+}*/

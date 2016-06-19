@@ -131,9 +131,9 @@ export default class NoDocuments extends Component {
     		dataForMap.push(jsonCoursesData);
     	}
 
-		this.putMapMarkers(dataForMap);
-
 		if (this.props.sailor.specialization !== '') {
+
+			this.putMapMarkers(dataForMap);
 
 
 			for (let i = 0; i < professionsJsonData.length; i++) {
@@ -153,18 +153,18 @@ export default class NoDocuments extends Component {
 			coursesResult = courses.map((item, number) => {
 				if (item.kind === 'higher' && this.props.noDocuments.higherEducation) {
 					return (
-						<ul key={ number }>
+						<ul key={ number } className="course-list__courses">
 							<li>Название: { item.title }</li>
-							<li>Стоимость: { item.price_for_cource }</li>
+							<li>Стоимость: { item.price_for_cource } рублей</li>
 							<li>Время на обучение (часов): { item.studying_time }</li>
 						</ul>
 					)
 				}
 				else if (item.kind === 'course' && this.props.noDocuments.coursesEducation) {
 					return (
-						<ul key={ number }>
+						<ul key={ number } className="course-list__courses">
 							<li>Название: { item.title }</li>
-							<li>Стоимость: { item.price_for_cource }</li>
+							<li>Стоимость: { item.price_for_cource } рублей</li>
 							<li>Время на обучение (часов): { item.studying_time }</li>
 						</ul>
 					)
